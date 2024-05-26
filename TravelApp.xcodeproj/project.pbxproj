@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		465A420B2C0365DC004FECFC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 465A420A2C0365DC004FECFC /* Kingfisher */; };
 		46625F292C03605D000858AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46625F282C03605D000858AA /* AppDelegate.swift */; };
 		46625F2B2C03605D000858AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46625F2A2C03605D000858AA /* SceneDelegate.swift */; };
 		46625F2D2C03605D000858AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46625F2C2C03605D000858AA /* ViewController.swift */; };
 		46625F302C03605D000858AA /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 46625F2F2C03605D000858AA /* Base */; };
 		46625F322C036062000858AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46625F312C036062000858AA /* Assets.xcassets */; };
 		46625F352C036062000858AA /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 46625F342C036062000858AA /* Base */; };
+		46625F3D2C036154000858AA /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46625F3C2C036154000858AA /* TravelTableViewController.swift */; };
+		46625F3F2C036172000858AA /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46625F3E2C036172000858AA /* TravelTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		46625F312C036062000858AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46625F342C036062000858AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46625F362C036062000858AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46625F3C2C036154000858AA /* TravelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewController.swift; sourceTree = "<group>"; };
+		46625F3E2C036172000858AA /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465A420B2C0365DC004FECFC /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +66,8 @@
 				46625F2A2C03605D000858AA /* SceneDelegate.swift */,
 				46625F2C2C03605D000858AA /* ViewController.swift */,
 				46625F2E2C03605D000858AA /* Main.storyboard */,
+				46625F3C2C036154000858AA /* TravelTableViewController.swift */,
+				46625F3E2C036172000858AA /* TravelTableViewCell.swift */,
 				46625F312C036062000858AA /* Assets.xcassets */,
 				46625F332C036062000858AA /* LaunchScreen.storyboard */,
 				46625F362C036062000858AA /* Info.plist */,
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = TravelApp;
+			packageProductDependencies = (
+				465A420A2C0365DC004FECFC /* Kingfisher */,
+			);
 			productName = TravelApp;
 			productReference = 46625F252C03605D000858AA /* TravelApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 46625F1C2C03605D000858AA;
+			packageReferences = (
+				465A42092C0365DC004FECFC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 46625F262C03605D000858AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +155,8 @@
 				46625F2D2C03605D000858AA /* ViewController.swift in Sources */,
 				46625F292C03605D000858AA /* AppDelegate.swift in Sources */,
 				46625F2B2C03605D000858AA /* SceneDelegate.swift in Sources */,
+				46625F3F2C036172000858AA /* TravelTableViewCell.swift in Sources */,
+				46625F3D2C036154000858AA /* TravelTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,8 +313,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +322,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sesac.TravelApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -324,8 +344,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +353,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sesac.TravelApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -361,6 +385,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		465A42092C0365DC004FECFC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		465A420A2C0365DC004FECFC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 465A42092C0365DC004FECFC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 46625F1D2C03605D000858AA /* Project object */;
 }
